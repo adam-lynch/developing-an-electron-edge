@@ -1,0 +1,1 @@
+window.speechSynthesis.speak(new SpeechSynthesisUtterance('Hello World'));

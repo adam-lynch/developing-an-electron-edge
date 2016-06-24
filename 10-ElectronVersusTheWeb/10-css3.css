@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.item {
+    flex: 1;
+}
+
+.item--wide {
+    flex: 3;
+}

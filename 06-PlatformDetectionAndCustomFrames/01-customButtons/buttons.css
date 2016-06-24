@@ -1,0 +1,12 @@
+.button {
+    /* Your custom styles */
+    border-radius: 3px;
+}
+
+.platform-mac .button {
+    border-radius: 5px;
+}
+
+.platform-windows-8 .button {
+    border-radius: 0;
+}

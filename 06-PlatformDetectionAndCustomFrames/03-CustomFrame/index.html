@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Our cool editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="window-bar">
+    <ul class="window-actions">
+      <li class="window-action-wrapper"><a href="#" class="window-action window-action-minimize" title="Minimize"><span>Minimize</span></a></li>
+      <li class="window-action-wrapper window-action-wrapper-maximize"><a href="#" class="window-action window-action-maximize" title="Maximize"><span>Maximize</span></a></li>
+      <li class="window-action-wrapper window-action-wrapper-restore"><a href="#" class="window-action window-action-restore" title="Restore"><span>Restore</span></a></li>
+      <li class="window-action-wrapper window-action-wrapper-close"><a href="#" class="window-action window-action-close" title="Close"><span>Close</span></a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="header">
+      <div class="title">Awesome Editor</div>
+      <a href="#" class="open-file">Open file</a>
+      &middot;
+      <a href="#" class="show-file-in-folder">Show file in folder</a>
+    </div>
+    <div class="container hidden">
+      <div class="editor">
+        <textarea autofocus="true" placeholder="# Write something here..."></textarea>
+      </div>
+      <div class="preview"></div>
+    </div>
+  </main>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

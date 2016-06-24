@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Debugging</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+body {
+  font-family: 'Roboto';
+}
+  </style>
+</head>
+<body>
+
+  <ul id="repos">
+  </ul>
+
+  <script type="text/javascript">
+var reposList = document.getElementById('repos');
+var url = 'https://api.github.com/users/atom/repos';
+
+fetchPage(url);
+
+function fetchPage (url) {
+  fetch(url)
+    .then((response) => {
+      var link = response.headers.get('Link');
+      var regex = /<(https:\/\/api.github.com\/user\/[0-9]*\/repos\?page\=[0-9]*)>; rel="next"/g;
+      var matches = regex.exec(link);
+
+      if (matches) {
+        fetchPage(matches[1]);
+      }
+
+      return response.json();
+    })
+    .then((json) => {
+      json.map((repo) => {
+        var el = document.createElement('li');
+        el.textContent = repo.name;
+        reposList.appendChild(el);
+      })
+    });
+}
+  </script>
+</body>
+</html>

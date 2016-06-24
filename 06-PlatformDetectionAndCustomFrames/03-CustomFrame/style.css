@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+/* Window bar stuff */
+
+
+.window-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: #e3e3e3;
+  -webkit-app-region: drag;
+}
+
+.window-actions {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.platform-mac .window-actions {
+  float: left;
+}
+
+.window-action-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 8px;
+  order: 1;
+}
+
+.window-action-wrapper-restore {
+  display: none;
+}
+
+.window-action {
+  padding: 8px;
+  border-radius: 100%;
+  opacity: 0.8;
+  transition: 0.25s opacity, 0.5s box-shadow;
+  -webkit-app-region: no-drag;
+}
+
+.window-action:hover {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.window-action span {
+  display: none;
+}
+
+.window-action-minimize {
+  background: #fcd000;
+}
+
+.window-action-maximize,
+.window-action-restore {
+  background: #00fc65;
+}
+
+.window-action-close {
+  background: #fc0000;
+}
+
+.platform-mac .window-action-wrapper-close {
+  order: 0;
+}
+
+.window-action-wrapper-restore,
+.window--is-maximized .window-action-wrapper-maximize {
+  display: none;
+}
+
+.window--is-maximized .window-action-wrapper-restore {
+  display: flex;
+}
+
+/* The rest */
+
+main {
+  margin-top: 46px;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #444;
+  color: #ddd;
+  vertical-align: middle;
+  padding: 15px 5px 0px 5px;
+}
+
+.header .title {
+  font-size: 18px;
+}
+
+.header a {
+  color: #ddd;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.editor,
+.preview {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.editor {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.editor textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+.preview {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: #ddd;
+}

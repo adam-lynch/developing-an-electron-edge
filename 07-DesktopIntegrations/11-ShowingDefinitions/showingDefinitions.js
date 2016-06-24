@@ -1,0 +1,1 @@
+mainWindow.showDefinitionForSelection()

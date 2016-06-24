@@ -1,0 +1,2 @@
+cd node_modules/leveldown
+node-gyp rebuild --target=0.37.2 --arch=x86 --disturl=https://atom.io/download/atom-shell

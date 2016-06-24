@@ -1,0 +1,15 @@
+{
+  "name": "the-different-processes",
+  "version": "1.0.0",
+  "description": "The different Electron processes",
+  "main": "main.js",
+  "dependencies": {
+    "electron-prebuilt": "^0.36.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Max Gfeller <max.gfeller@gmail.com>",
+  "license": "ISC"
+}

@@ -1,0 +1,1 @@
+var isRegistered = globalShortcut.isRegistered('Ctrl+V');

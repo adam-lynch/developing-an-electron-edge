@@ -1,0 +1,1 @@
+mainWindow.setProgressBar(0.5);

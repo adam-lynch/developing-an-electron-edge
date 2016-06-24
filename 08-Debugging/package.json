@@ -1,0 +1,14 @@
+{
+  "name": "debugging",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Max Gfeller",
+  "license": "ISC",
+  "dependencies": {
+    "electron-prebuilt": "^0.36.9"
+  }
+}

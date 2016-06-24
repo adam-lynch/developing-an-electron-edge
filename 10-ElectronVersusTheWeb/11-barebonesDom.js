@@ -1,0 +1,1 @@
+document.querySelector('.a > .b').classList.add('c');
