@@ -1,5 +1,5 @@
 const marked = require('marked');
-const remote = require('remote');
+const remote = require('electron').remote; // fixed incorrect usage from book
 const dialog = remote.require('dialog');
 const fs = require('fs');
 const shell = require('electron').shell;
